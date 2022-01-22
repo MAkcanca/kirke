@@ -53,6 +53,19 @@ class ProfileFullName extends ValueObject<String> {
   const ProfileFullName._(this.value);
 }
 
+class ProfileBirthday extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  static const maxLength = 20;
+
+  factory ProfileBirthday(String input) {
+    return ProfileBirthday._(
+      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+    );
+  }
+  const ProfileBirthday._(this.value);
+}
+
 class ProfileLocation extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;

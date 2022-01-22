@@ -22,6 +22,22 @@ class _$ProfileFormEventTearOff {
       fullName,
     );
   }
+
+  LocationChanged locationChanged(String location) {
+    return LocationChanged(
+      location,
+    );
+  }
+
+  BirthdayChanged birthdayChanged(String birthday) {
+    return BirthdayChanged(
+      birthday,
+    );
+  }
+
+  CompleteProfilePressed completeProfilePressed() {
+    return const CompleteProfilePressed();
+  }
 }
 
 /// @nodoc
@@ -29,43 +45,56 @@ const $ProfileFormEvent = _$ProfileFormEventTearOff();
 
 /// @nodoc
 mixin _$ProfileFormEvent {
-  String get fullName => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String location) locationChanged,
+    required TResult Function(String birthday) birthdayChanged,
+    required TResult Function() completeProfilePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(FullNameChanged value) fullNameChanged,
+    required TResult Function(LocationChanged value) locationChanged,
+    required TResult Function(BirthdayChanged value) birthdayChanged,
+    required TResult Function(CompleteProfilePressed value)
+        completeProfilePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $ProfileFormEventCopyWith<ProfileFormEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -74,7 +103,6 @@ abstract class $ProfileFormEventCopyWith<$Res> {
   factory $ProfileFormEventCopyWith(
           ProfileFormEvent value, $Res Function(ProfileFormEvent) then) =
       _$ProfileFormEventCopyWithImpl<$Res>;
-  $Res call({String fullName});
 }
 
 /// @nodoc
@@ -85,27 +113,13 @@ class _$ProfileFormEventCopyWithImpl<$Res>
   final ProfileFormEvent _value;
   // ignore: unused_field
   final $Res Function(ProfileFormEvent) _then;
-
-  @override
-  $Res call({
-    Object? fullName = freezed,
-  }) {
-    return _then(_value.copyWith(
-      fullName: fullName == freezed
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
-abstract class $FullNameChangedCopyWith<$Res>
-    implements $ProfileFormEventCopyWith<$Res> {
+abstract class $FullNameChangedCopyWith<$Res> {
   factory $FullNameChangedCopyWith(
           FullNameChanged value, $Res Function(FullNameChanged) then) =
       _$FullNameChangedCopyWithImpl<$Res>;
-  @override
   $Res call({String fullName});
 }
 
@@ -167,6 +181,9 @@ class _$FullNameChanged implements FullNameChanged {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String location) locationChanged,
+    required TResult Function(String birthday) birthdayChanged,
+    required TResult Function() completeProfilePressed,
   }) {
     return fullNameChanged(fullName);
   }
@@ -175,6 +192,9 @@ class _$FullNameChanged implements FullNameChanged {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
   }) {
     return fullNameChanged?.call(fullName);
   }
@@ -183,6 +203,9 @@ class _$FullNameChanged implements FullNameChanged {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -195,6 +218,10 @@ class _$FullNameChanged implements FullNameChanged {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(FullNameChanged value) fullNameChanged,
+    required TResult Function(LocationChanged value) locationChanged,
+    required TResult Function(BirthdayChanged value) birthdayChanged,
+    required TResult Function(CompleteProfilePressed value)
+        completeProfilePressed,
   }) {
     return fullNameChanged(this);
   }
@@ -203,6 +230,9 @@ class _$FullNameChanged implements FullNameChanged {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
   }) {
     return fullNameChanged?.call(this);
   }
@@ -211,6 +241,9 @@ class _$FullNameChanged implements FullNameChanged {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -223,12 +256,422 @@ class _$FullNameChanged implements FullNameChanged {
 abstract class FullNameChanged implements ProfileFormEvent {
   const factory FullNameChanged(String fullName) = _$FullNameChanged;
 
-  @override
   String get fullName;
-  @override
   @JsonKey(ignore: true)
   $FullNameChangedCopyWith<FullNameChanged> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LocationChangedCopyWith<$Res> {
+  factory $LocationChangedCopyWith(
+          LocationChanged value, $Res Function(LocationChanged) then) =
+      _$LocationChangedCopyWithImpl<$Res>;
+  $Res call({String location});
+}
+
+/// @nodoc
+class _$LocationChangedCopyWithImpl<$Res>
+    extends _$ProfileFormEventCopyWithImpl<$Res>
+    implements $LocationChangedCopyWith<$Res> {
+  _$LocationChangedCopyWithImpl(
+      LocationChanged _value, $Res Function(LocationChanged) _then)
+      : super(_value, (v) => _then(v as LocationChanged));
+
+  @override
+  LocationChanged get _value => super._value as LocationChanged;
+
+  @override
+  $Res call({
+    Object? location = freezed,
+  }) {
+    return _then(LocationChanged(
+      location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LocationChanged implements LocationChanged {
+  const _$LocationChanged(this.location);
+
+  @override
+  final String location;
+
+  @override
+  String toString() {
+    return 'ProfileFormEvent.locationChanged(location: $location)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is LocationChanged &&
+            (identical(other.location, location) ||
+                other.location == location));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, location);
+
+  @JsonKey(ignore: true)
+  @override
+  $LocationChangedCopyWith<LocationChanged> get copyWith =>
+      _$LocationChangedCopyWithImpl<LocationChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String location) locationChanged,
+    required TResult Function(String birthday) birthdayChanged,
+    required TResult Function() completeProfilePressed,
+  }) {
+    return locationChanged(location);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
+  }) {
+    return locationChanged?.call(location);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
+    required TResult orElse(),
+  }) {
+    if (locationChanged != null) {
+      return locationChanged(location);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FullNameChanged value) fullNameChanged,
+    required TResult Function(LocationChanged value) locationChanged,
+    required TResult Function(BirthdayChanged value) birthdayChanged,
+    required TResult Function(CompleteProfilePressed value)
+        completeProfilePressed,
+  }) {
+    return locationChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
+  }) {
+    return locationChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
+    required TResult orElse(),
+  }) {
+    if (locationChanged != null) {
+      return locationChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LocationChanged implements ProfileFormEvent {
+  const factory LocationChanged(String location) = _$LocationChanged;
+
+  String get location;
+  @JsonKey(ignore: true)
+  $LocationChangedCopyWith<LocationChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $BirthdayChangedCopyWith<$Res> {
+  factory $BirthdayChangedCopyWith(
+          BirthdayChanged value, $Res Function(BirthdayChanged) then) =
+      _$BirthdayChangedCopyWithImpl<$Res>;
+  $Res call({String birthday});
+}
+
+/// @nodoc
+class _$BirthdayChangedCopyWithImpl<$Res>
+    extends _$ProfileFormEventCopyWithImpl<$Res>
+    implements $BirthdayChangedCopyWith<$Res> {
+  _$BirthdayChangedCopyWithImpl(
+      BirthdayChanged _value, $Res Function(BirthdayChanged) _then)
+      : super(_value, (v) => _then(v as BirthdayChanged));
+
+  @override
+  BirthdayChanged get _value => super._value as BirthdayChanged;
+
+  @override
+  $Res call({
+    Object? birthday = freezed,
+  }) {
+    return _then(BirthdayChanged(
+      birthday == freezed
+          ? _value.birthday
+          : birthday // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$BirthdayChanged implements BirthdayChanged {
+  const _$BirthdayChanged(this.birthday);
+
+  @override
+  final String birthday;
+
+  @override
+  String toString() {
+    return 'ProfileFormEvent.birthdayChanged(birthday: $birthday)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is BirthdayChanged &&
+            (identical(other.birthday, birthday) ||
+                other.birthday == birthday));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, birthday);
+
+  @JsonKey(ignore: true)
+  @override
+  $BirthdayChangedCopyWith<BirthdayChanged> get copyWith =>
+      _$BirthdayChangedCopyWithImpl<BirthdayChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String location) locationChanged,
+    required TResult Function(String birthday) birthdayChanged,
+    required TResult Function() completeProfilePressed,
+  }) {
+    return birthdayChanged(birthday);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
+  }) {
+    return birthdayChanged?.call(birthday);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
+    required TResult orElse(),
+  }) {
+    if (birthdayChanged != null) {
+      return birthdayChanged(birthday);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FullNameChanged value) fullNameChanged,
+    required TResult Function(LocationChanged value) locationChanged,
+    required TResult Function(BirthdayChanged value) birthdayChanged,
+    required TResult Function(CompleteProfilePressed value)
+        completeProfilePressed,
+  }) {
+    return birthdayChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
+  }) {
+    return birthdayChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
+    required TResult orElse(),
+  }) {
+    if (birthdayChanged != null) {
+      return birthdayChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class BirthdayChanged implements ProfileFormEvent {
+  const factory BirthdayChanged(String birthday) = _$BirthdayChanged;
+
+  String get birthday;
+  @JsonKey(ignore: true)
+  $BirthdayChangedCopyWith<BirthdayChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CompleteProfilePressedCopyWith<$Res> {
+  factory $CompleteProfilePressedCopyWith(CompleteProfilePressed value,
+          $Res Function(CompleteProfilePressed) then) =
+      _$CompleteProfilePressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$CompleteProfilePressedCopyWithImpl<$Res>
+    extends _$ProfileFormEventCopyWithImpl<$Res>
+    implements $CompleteProfilePressedCopyWith<$Res> {
+  _$CompleteProfilePressedCopyWithImpl(CompleteProfilePressed _value,
+      $Res Function(CompleteProfilePressed) _then)
+      : super(_value, (v) => _then(v as CompleteProfilePressed));
+
+  @override
+  CompleteProfilePressed get _value => super._value as CompleteProfilePressed;
+}
+
+/// @nodoc
+
+class _$CompleteProfilePressed implements CompleteProfilePressed {
+  const _$CompleteProfilePressed();
+
+  @override
+  String toString() {
+    return 'ProfileFormEvent.completeProfilePressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is CompleteProfilePressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String location) locationChanged,
+    required TResult Function(String birthday) birthdayChanged,
+    required TResult Function() completeProfilePressed,
+  }) {
+    return completeProfilePressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
+  }) {
+    return completeProfilePressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String location)? locationChanged,
+    TResult Function(String birthday)? birthdayChanged,
+    TResult Function()? completeProfilePressed,
+    required TResult orElse(),
+  }) {
+    if (completeProfilePressed != null) {
+      return completeProfilePressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FullNameChanged value) fullNameChanged,
+    required TResult Function(LocationChanged value) locationChanged,
+    required TResult Function(BirthdayChanged value) birthdayChanged,
+    required TResult Function(CompleteProfilePressed value)
+        completeProfilePressed,
+  }) {
+    return completeProfilePressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
+  }) {
+    return completeProfilePressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FullNameChanged value)? fullNameChanged,
+    TResult Function(LocationChanged value)? locationChanged,
+    TResult Function(BirthdayChanged value)? birthdayChanged,
+    TResult Function(CompleteProfilePressed value)? completeProfilePressed,
+    required TResult orElse(),
+  }) {
+    if (completeProfilePressed != null) {
+      return completeProfilePressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CompleteProfilePressed implements ProfileFormEvent {
+  const factory CompleteProfilePressed() = _$CompleteProfilePressed;
 }
 
 /// @nodoc
@@ -237,12 +680,16 @@ class _$ProfileFormStateTearOff {
 
   _ProfileFormState call(
       {required ProfileFullName fullName,
+      required ProfileLocation location,
+      required ProfileBirthday birthday,
       required bool showErrorMessages,
       required bool isSubmitting,
       required Option<Either<ProfileFailure, Unit>>
           authFailureOrSuccessOption}) {
     return _ProfileFormState(
       fullName: fullName,
+      location: location,
+      birthday: birthday,
       showErrorMessages: showErrorMessages,
       isSubmitting: isSubmitting,
       authFailureOrSuccessOption: authFailureOrSuccessOption,
@@ -256,6 +703,8 @@ const $ProfileFormState = _$ProfileFormStateTearOff();
 /// @nodoc
 mixin _$ProfileFormState {
   ProfileFullName get fullName => throw _privateConstructorUsedError;
+  ProfileLocation get location => throw _privateConstructorUsedError;
+  ProfileBirthday get birthday => throw _privateConstructorUsedError;
   bool get showErrorMessages => throw _privateConstructorUsedError;
   bool get isSubmitting => throw _privateConstructorUsedError;
   Option<Either<ProfileFailure, Unit>> get authFailureOrSuccessOption =>
@@ -273,6 +722,8 @@ abstract class $ProfileFormStateCopyWith<$Res> {
       _$ProfileFormStateCopyWithImpl<$Res>;
   $Res call(
       {ProfileFullName fullName,
+      ProfileLocation location,
+      ProfileBirthday birthday,
       bool showErrorMessages,
       bool isSubmitting,
       Option<Either<ProfileFailure, Unit>> authFailureOrSuccessOption});
@@ -290,6 +741,8 @@ class _$ProfileFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? fullName = freezed,
+    Object? location = freezed,
+    Object? birthday = freezed,
     Object? showErrorMessages = freezed,
     Object? isSubmitting = freezed,
     Object? authFailureOrSuccessOption = freezed,
@@ -299,6 +752,14 @@ class _$ProfileFormStateCopyWithImpl<$Res>
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
               as ProfileFullName,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as ProfileLocation,
+      birthday: birthday == freezed
+          ? _value.birthday
+          : birthday // ignore: cast_nullable_to_non_nullable
+              as ProfileBirthday,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
@@ -324,6 +785,8 @@ abstract class _$ProfileFormStateCopyWith<$Res>
   @override
   $Res call(
       {ProfileFullName fullName,
+      ProfileLocation location,
+      ProfileBirthday birthday,
       bool showErrorMessages,
       bool isSubmitting,
       Option<Either<ProfileFailure, Unit>> authFailureOrSuccessOption});
@@ -343,6 +806,8 @@ class __$ProfileFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? fullName = freezed,
+    Object? location = freezed,
+    Object? birthday = freezed,
     Object? showErrorMessages = freezed,
     Object? isSubmitting = freezed,
     Object? authFailureOrSuccessOption = freezed,
@@ -352,6 +817,14 @@ class __$ProfileFormStateCopyWithImpl<$Res>
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
               as ProfileFullName,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as ProfileLocation,
+      birthday: birthday == freezed
+          ? _value.birthday
+          : birthday // ignore: cast_nullable_to_non_nullable
+              as ProfileBirthday,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
@@ -373,12 +846,18 @@ class __$ProfileFormStateCopyWithImpl<$Res>
 class _$_ProfileFormState implements _ProfileFormState {
   const _$_ProfileFormState(
       {required this.fullName,
+      required this.location,
+      required this.birthday,
       required this.showErrorMessages,
       required this.isSubmitting,
       required this.authFailureOrSuccessOption});
 
   @override
   final ProfileFullName fullName;
+  @override
+  final ProfileLocation location;
+  @override
+  final ProfileBirthday birthday;
   @override
   final bool showErrorMessages;
   @override
@@ -388,7 +867,7 @@ class _$_ProfileFormState implements _ProfileFormState {
 
   @override
   String toString() {
-    return 'ProfileFormState(fullName: $fullName, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'ProfileFormState(fullName: $fullName, location: $location, birthday: $birthday, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
@@ -398,6 +877,10 @@ class _$_ProfileFormState implements _ProfileFormState {
             other is _ProfileFormState &&
             (identical(other.fullName, fullName) ||
                 other.fullName == fullName) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
+            (identical(other.birthday, birthday) ||
+                other.birthday == birthday) &&
             (identical(other.showErrorMessages, showErrorMessages) ||
                 other.showErrorMessages == showErrorMessages) &&
             (identical(other.isSubmitting, isSubmitting) ||
@@ -409,8 +892,8 @@ class _$_ProfileFormState implements _ProfileFormState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, fullName, showErrorMessages,
-      isSubmitting, authFailureOrSuccessOption);
+  int get hashCode => Object.hash(runtimeType, fullName, location, birthday,
+      showErrorMessages, isSubmitting, authFailureOrSuccessOption);
 
   @JsonKey(ignore: true)
   @override
@@ -421,6 +904,8 @@ class _$_ProfileFormState implements _ProfileFormState {
 abstract class _ProfileFormState implements ProfileFormState {
   const factory _ProfileFormState(
       {required ProfileFullName fullName,
+      required ProfileLocation location,
+      required ProfileBirthday birthday,
       required bool showErrorMessages,
       required bool isSubmitting,
       required Option<Either<ProfileFailure, Unit>>
@@ -428,6 +913,10 @@ abstract class _ProfileFormState implements ProfileFormState {
 
   @override
   ProfileFullName get fullName;
+  @override
+  ProfileLocation get location;
+  @override
+  ProfileBirthday get birthday;
   @override
   bool get showErrorMessages;
   @override

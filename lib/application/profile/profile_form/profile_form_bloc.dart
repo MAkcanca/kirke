@@ -16,6 +16,29 @@ class ProfileFormBloc extends Bloc<ProfileFormEvent, ProfileFormState> {
 
   @override
   Stream<ProfileFormState> mapEventToState(ProfileFormEvent event) async* {
-    // TODO: Add your event logic
+    yield* event.map(
+      fullNameChanged: (e) async* {
+        yield state.copyWith(
+            fullName: ProfileFullName(e.fullName),
+            authFailureOrSuccessOption: none());
+      },
+      locationChanged: (e) async* {
+        yield state.copyWith(
+            location: ProfileLocation(e.location),
+            authFailureOrSuccessOption: none());
+      },
+      birthdayChanged: (e) async* {
+        yield state.copyWith(
+            birthday: ProfileBirthday(e.birthday),
+            authFailureOrSuccessOption: none());
+      },
+      completeProfilePressed: (e) async* {
+        print(state);
+        yield state.copyWith(
+            isSubmitting: false,
+            showErrorMessages: true,
+            authFailureOrSuccessOption: none());
+      },
+    );
   }
 }
